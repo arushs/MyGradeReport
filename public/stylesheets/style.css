@@ -6,7 +6,7 @@ html {
 body {
     width: 100%;
     background-attachment: fixed;
-    background-image: url('/images/chalkboard.jpg') !important;
+    background-image: url('/images/chalkboard.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -16,6 +16,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   color: white;
+
 }
 
 #subhead {
@@ -31,7 +32,9 @@ body {
 }
 
 #header h1 {
-  font-size: 8em;
+  font-size: 10em;
+  font-size-adjust: auto;
+
 }
 
 #signup {
@@ -68,7 +71,7 @@ a {
   margin-top: 2em;
   font-family: 'chalk';
   color: white;
-  font-size: 10em;
+  font-size: 9.5em;
 }
 
 
@@ -95,4 +98,20 @@ src: url('../fonts/Rudiment.ttf'); /*URL to font*/
 @font-face {
 font-family: 'frames'; /*a name to be used later*/
 src: url('../fonts/frames.ttf'); /*URL to font*/
+}
+
+@media screen and (max-device-width: 480px) {
+#header h1 { font-size: 3em;}
+}
+
+@media screen and (max-device-width: 480px) {
+#subhead p { font-size: 1.5em;
+}
+
+@media screen and (max-device-width: 480px) {
+#success { font-size: 5em;
+}
+
+@media screen and (max-device-width: 480px) {
+#footer { height: 0em;
 }
