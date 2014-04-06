@@ -1,0 +1,33 @@
+.btn-primary{
+  width: 4em;
+}
+
+.errorfont {
+  font-family: 'Myriad Pro', Helvetica, Verdana;
+  color: #00c957;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+#errorbox {
+    font-family: 'Myriad Pro', Helvetica, Verdana;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+}
+
+#error h1 {
+  font-family: 'chalk';
+  color: white;
+  font-size: 10em;
+
+}
+
+#error h2 {
+  font-family: 'Myriad Pro', Helvetica, Verdana;
+  color: white;
+  font-size: 2em;
+}

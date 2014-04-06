@@ -36,10 +36,12 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/signup', routes.signup);
+app.get('/explore', routes.explore);
 app.get('/signup/confirm', routes.signup_confirm);
 app.get('/signup/error', routes.signup_error);
 app.get('/badlogin', routes.bad_login);
 app.get('/success', routes.success);
+
 
 app.post('/new-user', routes.new_user);
 app.post('/login-attempt', routes.check_login);

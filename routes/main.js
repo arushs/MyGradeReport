@@ -1,5 +1,5 @@
 
-var pageTitle = 'Mu Grade Report : ';
+var pageTitle = 'My Grade Report : ';
 var User = require('./../models/user');
 
 exports.index = function(req, res) {
@@ -11,6 +11,12 @@ exports.index = function(req, res) {
 exports.signup = function(req, res) {
     res.render('signup', {
         title: pageTitle + 'Sign up'
+    });
+};
+
+exports.explore = function(req, res) {
+    res.render('explore', {
+        title: pageTitle + 'explore'
     });
 };
 
