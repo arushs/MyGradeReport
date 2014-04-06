@@ -1,0 +1,27 @@
+#signupbox {
+    margin-top: 12%;
+    width: 0%;
+}
+
+.alert {
+    display: none;
+}
+.jumbotron{
+  height: auto;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main2 {
+  font-family: 'chalk';
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  margin-bottom: 5%;
+
+}
+
+#main2 h1 {
+  font-size: 10em;
+}

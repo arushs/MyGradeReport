@@ -1,0 +1,77 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    background-attachment: fixed;
+    background-image: url('/images/chalkboard.jpg') !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#header {
+  font-family: 'chalk';
+  margin-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+#subhead {
+  font-family: 'chalk';
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+
+}
+
+#subhead p {
+  font-size: 3em;
+}
+
+#header h1 {
+  font-size: 8em;
+}
+
+#signup {
+    font-family: 'Myriad Pro', Helvetica, Verdana;
+    margin-top: 1%;
+    width: 17%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+}
+
+#signup p {
+    font-size: 2em;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#menu {
+    background: rgba(255,255,255, 0.55);
+}
+
+
+#footer {
+    background: rgba(255,255,255, 0.3);
+}
+
+#footer-text {
+    padding-top: 1em;
+    color: rgb(51,51,51);
+}
+
+#footer-text a {
+    text-decoration: none;
+    color: rgb(51,51,51);
+}
+
+@font-face {
+font-family: 'chalk'; /*a name to be used later*/
+src: url('../fonts/Rudiment.ttf'); /*URL to font*/
+}

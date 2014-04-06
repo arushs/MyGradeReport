@@ -1,0 +1,16 @@
+@font-face {
+font-family: 'chalk'; /*a name to be used later*/
+src: url('../fonts/Rudiment.ttf'); /*URL to font*/
+}
+
+@font-face {
+font-family: 'crayon'; /*a name to be used later*/
+src: url('../fonts/Crayons.ttf'); /*URL to font*/
+}
+#
+
+#title{
+  font-family: 'chalk';
+  font-size: 3em;
+  color: white;
+}

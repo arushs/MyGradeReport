@@ -1,7 +1,32 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+        title My Grade Report
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+        link(rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css')
+        script(src='http://code.jquery.com/jquery-1.11.0.min.js')
+        script(src='http://code.jquery.com/jquery-migrate-1.2.1.min.js')
+        script(src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+      body
+      //  nav.navbar.navbar-default.navbar-fixed-top#menu(role='navigation')
+            div.container
+                div.navbar-header
+                    button.navbar-toggle(type="button" data-toggle="collapse" data-target="#collapsedBar")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+
+                div.collapse.navbar-collapse#collapsedBar
+                    ul.nav.navbar-nav
+                      //  li: a(href='/') Home
+                      //  li: a(href='/about') About
+                    form.navbar-form.navbar-right(method='post' action='/login-attempt')
+                        div.form-group
+                            input.form-control(name='login_uname' type='text' placeholder='username')
+                            input.form-control(name='login_password' type='password' placeholder='password')
+                            button.btn.btn-default(type='submit') Login
+
+        block content
