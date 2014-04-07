@@ -1,6 +1,8 @@
 
 var pageTitle = 'My Grade Report : ';
 var User = require('./../models/user');
+var bcrypt = require('bcrypt');
+
 
 exports.index = function(req, res) {
     res.render('index', {
@@ -63,18 +65,25 @@ exports.new_user = function(req, res) {
     });
 };
 
+
 exports.check_login = function(req, res) {
-    User.find({'userName': req.body.login_uname}, function(err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            if (user[0] == null) {
-                res.redirect('/badlogin');
-            } else {
-                res.redirect('/my_report');
-				// user[0].comparePasswords(req.body.login_password);
-            }
-        }
-    });
+	User.find({ 'userName': req.body.login_uname }, function(err, user) {
+		if (err) {
+			console.log(err);
+		} else {
+			if (user[0] == null) {
+				res.redirect('/badlogin')
+			} else {
+				bcrypt.compare(req.body.login_password, user[0].password,
+					function(err, result) {
+					if (result) {
+						res.redirect('/success');
+					} else {
+						res.redirect('/badlogin');
+					}
+				});
+			}
+		}
+	});
 
 }
