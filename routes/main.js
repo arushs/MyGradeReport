@@ -85,5 +85,4 @@ exports.check_login = function(req, res) {
 			}
 		}
 	});
-
 }
