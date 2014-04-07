@@ -1,7 +1,7 @@
-testProject
+MyGradeReport
 ===========
 
-#THIS PROJECT IS NOT WORKING
+##THIS PROJECT IS NOT WORKING
 
 This project is a test project.
 It helped us learn about Git, Branches, Node.js, and working with databases.
