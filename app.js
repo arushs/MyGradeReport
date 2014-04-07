@@ -1,13 +1,16 @@
 
-/**
- * Module dependencies.
- */
+
+ // mongoose setup
 
 var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var routes = require('./routes/main')
+var mongoose = require('mongoose');
+var dbURL = 'mongodb://localhost/gpamanager';
+var mongoUser = require('./models/user');
+
+//mongoose.connect(dbURL);
 
 var app = express();
 
@@ -19,19 +22,35 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.use(express.cookieParser('your secret here'));
+app.use(express.session());
 app.use(app.router);
-app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+    app.use(express.errorHandler());
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/signup', routes.signup);
+app.get('/explore', routes.explore);
+app.get('/signup/confirm', routes.signup_confirm);
+app.get('/signup/error', routes.signup_error);
+app.get('/badlogin', routes.bad_login);
+app.get('/success', routes.success);
 
+
+app.post('/new-user', routes.new_user);
+app.post('/login-attempt', routes.check_login);
+
+//Starting the server
 http.createServer(app).listen(app.get('port'), function(){
+<<<<<<< HEAD
   console.log('Express Server listening on port ' + app.get('port'));
+=======
+    console.log('Express server listening on port ' + app.get('port'));
+>>>>>>> Front-End-Devlopment
 });

@@ -1,0 +1,117 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    background-attachment: fixed;
+    background-image: url('/images/chalkboard.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#header {
+  font-family: 'chalk';
+  margin-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+
+}
+
+#subhead {
+  font-family: 'chalk';
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+
+}
+
+#subhead p {
+  font-size: 3em;
+}
+
+#header h1 {
+  font-size: 10em;
+  font-size-adjust: auto;
+
+}
+
+#signup {
+    font-family: 'Myriad Pro', Helvetica, Verdana;
+    margin-top: 1%;
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+}
+
+#buttons {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#signup p {
+    font-size: 2em;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#menu {
+    background: rgba(255,255,255, 0.55);
+}
+#frame {
+  font-family: 'frames';
+  font-size: 5em;
+}
+#success h1{
+  margin-top: 2em;
+  font-family: 'chalk';
+  color: white;
+  font-size: 9.5em;
+}
+
+
+
+#footer {
+    background: rgba(255,255,255, 0.3);
+}
+
+#footer-text {
+    padding-top: 1em;
+    color: rgb(51,51,51);
+}
+
+#footer-text a {
+    text-decoration: none;
+    color: rgb(51,51,51);
+}
+
+@font-face {
+font-family: 'chalk'; /*a name to be used later*/
+src: url('../fonts/Rudiment.ttf'); /*URL to font*/
+}
+
+@font-face {
+font-family: 'frames'; /*a name to be used later*/
+src: url('../fonts/frames.ttf'); /*URL to font*/
+}
+
+@media screen and (max-device-width: 480px) {
+#header h1 { font-size: 3em;}
+}
+
+@media screen and (max-device-width: 480px) {
+#subhead p { font-size: 1.5em;
+}
+
+@media screen and (max-device-width: 480px) {
+#success { font-size: 5em;
+}
+
+@media screen and (max-device-width: 480px) {
+#footer { height: 0em;
+}

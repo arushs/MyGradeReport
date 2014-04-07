@@ -1,5 +1,23 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    link(rel='stylesheet' href='./stylesheets/index.css')
+    div#header.text-center
+      h1 My Grade Report
+    div#subhead.text-center
+      p The easiest way to keep track of your grades!
+    div.jumbotron.text-center#signup
+      form(method='post' action='/login-attempt')
+          div.form-group
+              input.form-control(name='login_uname' type='text' placeholder='username')
+              br
+              input.form-control(name='login_password' type='password' placeholder='password')
+              br
+              button.btn.btn-default(type='submit' href='/myreport') Login
+              br
+        div.btn-group#buttons
+          a.btn.btn-success(type='button' href='/explore') Explore
+          a.btn.btn-primary(type='button' href='/signup') Sign Up
+    div.navbar-fixed-bottom#footer
+      div.containe
+            p.text-center#footer-text Designed by <a href='http://bentleybarker.me' target='_blank'>Bentley Barker</a> - Developed by <a href='http://arush.me' target='_blank'>Arush Shankar</a>
