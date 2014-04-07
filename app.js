@@ -3,10 +3,10 @@ var http = require('http');
 var path = require('path');
 var routes = require('./routes/main')
 var mongoose = require('mongoose');
-var dbURL = 'mongodb://localhost/gpamanager';
+var dbURL = 'mongodb://heroku_app23833525:st89vkfa981rl4ahenpr6v2l6@ds049237.mongolab.com:49237/heroku_app23833525';
 var mongoUser = require('./models/user');
 
-//mongoose.connect(dbURL);
+mongoose.connect(dbURL);
 
 var app = express();
 
