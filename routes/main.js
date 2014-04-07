@@ -69,9 +69,10 @@ exports.check_login = function(req, res) {
             console.log(err);
         } else {
             if (user[0] == null) {
-                res.redirect('/badlogin')
+                res.redirect('/badlogin');
             } else {
-                user[0].comparePasswords(req.body.login_password);
+                res.redirect('/my_report');
+				// user[0].comparePasswords(req.body.login_password);
             }
         }
     });
