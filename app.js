@@ -1,7 +1,3 @@
-
-
- // mongoose setup
-
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -48,9 +44,5 @@ app.post('/login-attempt', routes.check_login);
 
 //Starting the server
 http.createServer(app).listen(app.get('port'), function(){
-<<<<<<< HEAD
   console.log('Express Server listening on port ' + app.get('port'));
-=======
-    console.log('Express server listening on port ' + app.get('port'));
->>>>>>> Front-End-Devlopment
 });
