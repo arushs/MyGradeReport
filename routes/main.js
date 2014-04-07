@@ -44,6 +44,12 @@ exports.success = function(req, res) {
     });
 };
 
+exports.my_report = function(req, res) {
+    res.render('my_report', {
+        title: pageTitle + 'my_report'
+    });
+};
+
 
 exports.new_user = function(req, res) {
     var user = new User({
@@ -72,6 +78,7 @@ exports.check_login = function(req, res) {
                 res.redirect('/badlogin')
             } else {
                 user[0].comparePasswords(req.body.login_password);
+                res.redirect('/my_report')
             }
         }
     });
