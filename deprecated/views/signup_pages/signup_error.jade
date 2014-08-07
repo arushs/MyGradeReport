@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    link(rel='stylesheet' href='/stylesheets/signup_error.css')
+    div.text-center#error
+        h1 error.
+
+    div.text-center#errorbox
+        br
+        h2 Make sure all boxes were filled in correctly.
+        a.button.btn.btn-lg.btn-primary(type='button' href='/signup') Back
+        br
+        br

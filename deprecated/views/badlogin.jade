@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    link(rel='stylesheet' href='/stylesheets/signup_error.css')
+    div.text-center#error
+        h1 error.
+
+    div.text-center#errorbox
+        br
+        h2 Incorrect password or username.
+        a.button.btn.btn-lg.btn-primary(type='button' href='/') Back
+        br
+        br
